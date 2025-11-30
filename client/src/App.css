@@ -1,0 +1,401 @@
+.app-layout {
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+
+.app-content {
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 左侧面板 */
+.left-panel {
+  width: 350px;
+  background: #fff;
+  border-right: 1px solid #e8e8e8;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+/* 中间面板 */
+.center-panel {
+  flex: 1;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  position: relative;
+}
+
+/* 右侧面板 */
+.right-panel {
+  width: 500px;
+  background: #fff;
+  border-left: 1px solid #e8e8e8;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel .ant-tabs-content-holder {
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* 文件预览容器 */
+.file-preview-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.file-preview-content {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.file-preview-content img,
+.file-preview-content iframe {
+  max-width: 100%;
+  max-height: calc(100vh - 100px);
+  display: block;
+}
+
+/* 缩放控制 */
+.zoom-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 文件列表 */
+.file-list-item {
+  padding: 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background: #fafafa;
+}
+
+.file-list-item.active {
+  border-color: #1890ff;
+  background: #e6f7ff;
+}
+
+.file-list-item.error {
+  border-color: #ff4d4f;
+  background: #fff1f0;
+}
+
+.file-list-item.success {
+  border-color: #52c41a;
+  background: #f6ffed;
+}
+
+/* 表格展示 */
+.table-container {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  border: 1px solid #e8e8e8;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+/* 公式展示 */
+.formula-item {
+  margin: 16px 0;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 4px;
+}
+
+/* 印章展示 */
+.seal-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.seal-item {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 8px;
+  text-align: center;
+}
+
+.seal-item img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+/* 标题层级 */
+.title-tree {
+  margin: 16px 0;
+}
+
+.title-tree-item {
+  padding: 8px 0;
+  border-left: 2px solid #e8e8e8;
+  padding-left: 16px;
+  margin-left: 16px;
+}
+
+.title-tree-item.level-1 {
+  border-left-color: #1890ff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.title-tree-item.level-2 {
+  border-left-color: #52c41a;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.title-tree-item.level-3 {
+  border-left-color: #faad14;
+  font-size: 14px;
+}
+
+/* JSON预览 */
+.json-viewer {
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Markdown预览 */
+.markdown-viewer {
+  padding: 16px;
+  line-height: 1.8;
+  font-size: 14px;
+  color: #333;
+}
+
+.markdown-viewer h1,
+.markdown-viewer h2,
+.markdown-viewer h3,
+.markdown-viewer h4,
+.markdown-viewer h5,
+.markdown-viewer h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.markdown-viewer h1 {
+  font-size: 28px;
+  border-bottom: 2px solid #e8e8e8;
+  padding-bottom: 8px;
+}
+
+.markdown-viewer h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 6px;
+}
+
+.markdown-viewer h3 {
+  font-size: 20px;
+}
+
+.markdown-viewer h4 {
+  font-size: 18px;
+}
+
+.markdown-viewer p {
+  margin: 12px 0;
+}
+
+.markdown-viewer ul,
+.markdown-viewer ol {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.markdown-viewer li {
+  margin: 6px 0;
+}
+
+.markdown-viewer blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-left: 4px solid #1890ff;
+  background: #f0f9ff;
+  color: #666;
+}
+
+.markdown-viewer code {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+}
+
+.markdown-viewer pre {
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 12px;
+  overflow-x: auto;
+}
+
+.markdown-viewer pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.markdown-viewer table,
+.markdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  border: 1px solid #e8e8e8;
+  font-size: 14px;
+}
+
+.markdown-viewer table th,
+.markdown-viewer table td,
+.markdown-table th,
+.markdown-table td {
+  border: 1px solid #e8e8e8;
+  padding: 10px 12px;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  vertical-align: top;
+}
+
+.markdown-viewer table th,
+.markdown-table th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #333;
+}
+
+.markdown-viewer table tr:nth-child(even),
+.markdown-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.markdown-viewer table tr:hover,
+.markdown-table tr:hover {
+  background: #f0f0f0;
+}
+
+.markdown-viewer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+
+.markdown-viewer a {
+  color: #1890ff;
+  text-decoration: none;
+}
+
+.markdown-viewer a:hover {
+  text-decoration: underline;
+}
+
+.markdown-viewer hr {
+  border: none;
+  border-top: 1px solid #e8e8e8;
+  margin: 24px 0;
+}
+
+/* 图表描述 */
+.chart-description {
+  margin: 16px 0;
+  padding: 12px;
+  background: #f0f9ff;
+  border-left: 4px solid #1890ff;
+  border-radius: 4px;
+}
+
+/* Word预览样式 */
+.word-preview {
+  font-family: 'Microsoft YaHei', 'SimSun', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.word-preview p {
+  margin: 8px 0;
+}
+
+.word-preview h1,
+.word-preview h2,
+.word-preview h3,
+.word-preview h4,
+.word-preview h5,
+.word-preview h6 {
+  margin: 16px 0 8px 0;
+  font-weight: 600;
+}
+
+.word-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+.word-preview table td,
+.word-preview table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.word-preview table th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.word-preview img {
+  max-width: 100%;
+  height: auto;
+  margin: 8px 0;
+}
+
+.word-preview ul,
+.word-preview ol {
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+.word-preview li {
+  margin: 4px 0;
+}
+
